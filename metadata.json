@@ -1,0 +1,6 @@
+{
+  "name": "Dashboard de Performance da Agência",
+  "description": "Relatório Executivo de Volumetria e Performance Operacional (2025-2026)",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
