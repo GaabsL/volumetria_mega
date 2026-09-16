@@ -135,3 +135,93 @@ export const TIMELINE_CRONOGRAMA: TimelineEvent[] = [
     icon: "Calendar"
   }
 ];
+
+export interface MonthlyTemporalData {
+  month: string;
+  shortMonth: string;
+  design: number;
+  writing: number;
+  total: number;
+  momGrowth?: string;
+  designPct: number;
+  writingPct: number;
+  highlight?: string;
+}
+
+export const TEMPORAL_PRODUCTION_DATA: MonthlyTemporalData[] = [
+  {
+    month: "Janeiro",
+    shortMonth: "Jan",
+    design: 209,
+    writing: 289,
+    total: 498,
+    designPct: 42.0,
+    writingPct: 58.0,
+    highlight: "Início do Semestre"
+  },
+  {
+    month: "Fevereiro",
+    shortMonth: "Fev",
+    design: 194,
+    writing: 268,
+    total: 462,
+    momGrowth: "-7,2%",
+    designPct: 42.0,
+    writingPct: 58.0,
+    highlight: "Sazonalidade Fevereiro"
+  },
+  {
+    month: "Março",
+    shortMonth: "Mar",
+    design: 252,
+    writing: 349,
+    total: 601,
+    momGrowth: "+30,1%",
+    designPct: 41.9,
+    writingPct: 58.1,
+    highlight: "Retomada de Campanhas"
+  },
+  {
+    month: "Abril",
+    shortMonth: "Abr",
+    design: 218,
+    writing: 302,
+    total: 520,
+    momGrowth: "-13,5%",
+    designPct: 41.9,
+    writingPct: 58.1,
+    highlight: "Transição Trimestral"
+  },
+  {
+    month: "Maio",
+    shortMonth: "Mai",
+    design: 319,
+    writing: 441,
+    total: 760,
+    momGrowth: "+46,2%",
+    designPct: 42.0,
+    writingPct: 58.0,
+    highlight: "Aceleração Sazonal (Mães/Promo)"
+  },
+  {
+    month: "Junho",
+    shortMonth: "Jun",
+    design: 344,
+    writing: 475,
+    total: 819,
+    momGrowth: "+7,8%",
+    designPct: 42.0,
+    writingPct: 58.0,
+    highlight: "Pico Máximo do Semestre"
+  }
+];
+
+export const TEMPORAL_EXECUTIVE_SUMMARY = {
+  totalDemands: 3660,
+  totalWriting: 2124,
+  totalDesign: 1536,
+  writingPercentage: 58,
+  designPercentage: 42,
+  averageMonthly: 610,
+  semesterGrowth: "+64,5%"
+};
