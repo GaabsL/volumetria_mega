@@ -773,7 +773,7 @@ export default function TemporalSection() {
                 <td className="py-2.5 px-3 uppercase tracking-wider">Total Consolidado</td>
                 <td className="py-2.5 px-3 text-right text-[#0F172A] font-black">{totalDemands.toLocaleString('pt-BR')}</td>
                 <td className="py-2.5 px-3 text-right">100,0%</td>
-                <td className="py-2.5 px-3 text-right text-emerald-700 font-black">{semesterGrowth}</td>
+                <td className="py-2.5 px-3 text-right"></td>
                 <td className="py-2.5 px-3 font-sans text-[10px] text-slate-600">Soma consolidada do 1º Semestre 2026</td>
               </tr>
             </tfoot>
