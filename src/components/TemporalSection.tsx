@@ -724,8 +724,6 @@ export default function TemporalSection() {
             <thead className="bg-[#0F172A] text-white font-mono text-[10px] uppercase tracking-wider">
               <tr>
                 <th className="py-2.5 px-3">Mês</th>
-                <th className="py-2.5 px-3 text-right">Design</th>
-                <th className="py-2.5 px-3 text-right">Redação</th>
                 <th className="py-2.5 px-3 text-right">Total Entregas</th>
                 <th className="py-2.5 px-3 text-right">% Share Mensal</th>
                 <th className="py-2.5 px-3 text-right">Variação MoM</th>
@@ -742,12 +740,6 @@ export default function TemporalSection() {
                   >
                     <td className="py-2 px-3 font-sans font-bold text-slate-900">
                       {row.month}
-                    </td>
-                    <td className="py-2 px-3 text-right text-amber-700 font-bold">
-                      {row.design} <span className="text-[9px] font-normal text-slate-400">({row.designPct}%)</span>
-                    </td>
-                    <td className="py-2 px-3 text-right text-blue-700 font-bold">
-                      {row.writing} <span className="text-[9px] font-normal text-slate-400">({row.writingPct}%)</span>
                     </td>
                     <td className="py-2 px-3 text-right font-black text-slate-900">
                       {row.total}
@@ -779,8 +771,6 @@ export default function TemporalSection() {
             <tfoot className="bg-slate-100 font-mono text-[11px] font-bold text-slate-900 border-t-2 border-slate-300">
               <tr>
                 <td className="py-2.5 px-3 uppercase tracking-wider">Total Consolidado</td>
-                <td className="py-2.5 px-3 text-right text-amber-800">{totalDesign.toLocaleString('pt-BR')} (42%)</td>
-                <td className="py-2.5 px-3 text-right text-blue-800">{totalWriting.toLocaleString('pt-BR')} (58%)</td>
                 <td className="py-2.5 px-3 text-right text-[#0F172A] font-black">{totalDemands.toLocaleString('pt-BR')}</td>
                 <td className="py-2.5 px-3 text-right">100,0%</td>
                 <td className="py-2.5 px-3 text-right text-emerald-700 font-black">{semesterGrowth}</td>
