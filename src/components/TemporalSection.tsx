@@ -821,7 +821,7 @@ export default function TemporalSection() {
               3. Pico Máximo da Operação
             </span>
             <p className="text-[11px] leading-relaxed text-slate-300">
-              Junho consolidou o ápice operacional com <strong>819 entregas</strong> (+82,1% sobre os 498 de Janeiro), sustentado por fluxos otimizados e biblioteca de criativos reaproveitáveis.
+              Junho consolidou o ápice operacional com <strong>819 entregas</strong>, sustentado por fluxos otimizados e biblioteca de criativos reaproveitáveis.
             </p>
           </div>
         </div>
