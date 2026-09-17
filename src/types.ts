@@ -223,5 +223,5 @@ export const TEMPORAL_EXECUTIVE_SUMMARY = {
   writingPercentage: 58,
   designPercentage: 42,
   averageMonthly: 610,
-  semesterGrowth: "+64,5%"
+  semesterGrowth: "+82,1%"
 };

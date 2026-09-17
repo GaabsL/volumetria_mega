@@ -805,7 +805,7 @@ export default function TemporalSection() {
               1. Aceleração no 2º Trimestre
             </span>
             <p className="text-[11px] leading-relaxed text-slate-300">
-              Os meses de <strong>Maio (760)</strong> e <strong>Junho (819)</strong> responderam por <strong>43,1%</strong> de toda a produção do semestre, demonstrando capacidade de absorção de picos sazonais sem gargalos.
+              Os meses de <strong>Maio (760)</strong> e <strong>Junho (819)</strong> representaram <strong></strong>as maires produções do semestre, demonstrando capacidade de absorção de picos sazonais sem gargalos.
             </p>
           </div>
           <div className="bg-slate-800/60 p-3 rounded border border-slate-700 space-y-1">
@@ -821,7 +821,7 @@ export default function TemporalSection() {
               3. Pico Máximo da Operação
             </span>
             <p className="text-[11px] leading-relaxed text-slate-300">
-              Junho consolidou o ápice operacional com <strong>819 entregas</strong> (+64,5% sobre os 498 de Janeiro), sustentado por fluxos otimizados e biblioteca de criativos reaproveitáveis.
+              Junho consolidou o ápice operacional com <strong>819 entregas</strong> (+82,1% sobre os 498 de Janeiro), sustentado por fluxos otimizados e biblioteca de criativos reaproveitáveis.
             </p>
           </div>
         </div>
