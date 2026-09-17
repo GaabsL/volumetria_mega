@@ -32,8 +32,19 @@ export default function TemporalSection() {
     writingPercentage,
     designPercentage,
     averageMonthly,
-    semesterGrowth
+    semesterGrowth,
+    weightedMomAverage
   } = TEMPORAL_EXECUTIVE_SUMMARY;
+
+  // Cálculo dinâmico da média ponderada da variação MoM ponderada pelo volume de cada mês
+  const momRows = TEMPORAL_PRODUCTION_DATA.slice(1).map((curr, idx) => {
+    const prev = TEMPORAL_PRODUCTION_DATA[idx];
+    const rate = (curr.total - prev.total) / prev.total;
+    return { volume: curr.total, rate };
+  });
+  const totalMomVolume = momRows.reduce((acc, r) => acc + r.volume, 0);
+  const calculatedWeightedMom = momRows.reduce((acc, r) => acc + r.rate * r.volume, 0) / totalMomVolume;
+  const displayWeightedMom = weightedMomAverage || `${calculatedWeightedMom >= 0 ? '+' : ''}${(calculatedWeightedMom * 100).toFixed(1).replace('.', ',')}%`;
 
   // Chart coordinate constants
   // Max scale: for grouped max single bar is 475 (so 600 max), for stacked max total is 819 (so 1000 max)
@@ -773,8 +784,22 @@ export default function TemporalSection() {
                 <td className="py-2.5 px-3 uppercase tracking-wider">Total Consolidado</td>
                 <td className="py-2.5 px-3 text-right text-[#0F172A] font-black">{totalDemands.toLocaleString('pt-BR')}</td>
                 <td className="py-2.5 px-3 text-right">100,0%</td>
-                <td className="py-2.5 px-3 text-right"></td>
-                <td className="py-2.5 px-3 font-sans text-[10px] text-slate-600">Soma consolidada do 1º Semestre 2026</td>
+                <td className="py-2.5 px-3 text-right">
+                  <span 
+                    className={`inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded text-[10px] font-bold ${
+                      calculatedWeightedMom >= 0 
+                        ? 'text-emerald-700 bg-emerald-50 border border-emerald-200' 
+                        : 'text-rose-700 bg-rose-50 border border-rose-200'
+                    }`}
+                    title="Média ponderada das variações MoM com base no volume mensal"
+                  >
+                    {calculatedWeightedMom >= 0 ? <ArrowUpRight size={10} /> : <ArrowDownRight size={10} />}
+                    {displayWeightedMom}
+                  </span>
+                </td>
+                <td className="py-2.5 px-3 font-sans text-[10px] text-slate-600">
+                  Média ponderada MoM (base volume mensal)
+                </td>
               </tr>
             </tfoot>
           </table>
