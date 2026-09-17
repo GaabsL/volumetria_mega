@@ -63,7 +63,7 @@ export default function BiSection() {
               <FileBarChart2 size={15} />
             </span>
             <h2 className="text-base font-display font-bold text-[#0F172A] uppercase tracking-tight">
-              3. Vertical de BI &amp; Cronograma da Esteira de Dados
+              2. Vertical de BI &amp; Cronograma da Esteira de Dados
             </h2>
           </div>
           <p className="text-xs text-slate-500 max-w-2xl font-sans">

@@ -13,11 +13,11 @@ import Footer from './components/Footer';
 import { Layers, Sliders, FileBarChart2, BarChart3, ArrowUpCircle } from 'lucide-react';
 
 export default function App() {
-  const [activeSection, setActiveSection] = useState<'social' | 'operational' | 'bi' | 'temporal'>('social');
+  const [activeSection, setActiveSection] = useState<'social' | 'bi' | 'temporal'>('social');
   const [tabMode, setTabMode] = useState<'continuous' | 'single'>('continuous');
 
   // Scroll smooth helper / tab switcher
-  const scrollTo = (id: string, sectionName: 'social' | 'operational' | 'bi' | 'temporal') => {
+  const scrollTo = (id: string, sectionName: 'social' | 'bi' | 'temporal') => {
     setActiveSection(sectionName);
     if (tabMode === 'continuous') {
       const element = document.getElementById(id);
@@ -59,19 +59,6 @@ export default function App() {
             </button>
 
             <button
-              id="btn-nav-operational"
-              onClick={() => scrollTo('operational-eff', 'operational')}
-              className={`flex items-center gap-1 px-2.5 py-1 rounded transition-all font-bold ${
-                activeSection === 'operational'
-                  ? 'bg-amber-500 text-slate-950 shadow-sm'
-                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
-              }`}
-            >
-              <Sliders size={12} />
-              <span>2. Eficiência &amp; Refações</span>
-            </button>
-
-            <button
               id="btn-nav-bi"
               onClick={() => scrollTo('bi-section', 'bi')}
               className={`flex items-center gap-1 px-2.5 py-1 rounded transition-all font-bold ${
@@ -81,7 +68,7 @@ export default function App() {
               }`}
             >
               <FileBarChart2 size={12} />
-              <span>3. BI &amp; Cronogramas</span>
+              <span>2. BI &amp; Cronogramas</span>
             </button>
 
             <button
@@ -94,7 +81,7 @@ export default function App() {
               }`}
             >
               <BarChart3 size={12} />
-              <span>4. Visão Temporal</span>
+              <span>3. Visão Temporal</span>
             </button>
           </div>
 
@@ -144,23 +131,16 @@ export default function App() {
           </div>
         )}
 
-        {/* Section 2: Operational Effort & Rework Control */}
-        {(tabMode === 'continuous' || activeSection === 'operational') && (
-          <div className="animate-fade-in" style={{ animationDelay: '200ms' }}>
-            <OperationalSection />
-          </div>
-        )}
-
-        {/* Section 3: Data Analytics Reports & Calendar Scheduler */}
+        {/* Section 2: Data Analytics Reports & Calendar Scheduler */}
         {(tabMode === 'continuous' || activeSection === 'bi') && (
-          <div className="animate-fade-in" style={{ animationDelay: '300ms' }}>
+          <div className="animate-fade-in" style={{ animationDelay: '200ms' }}>
             <BiSection />
           </div>
         )}
 
-        {/* Section 4: Temporal Production Distribution (S1 2026) */}
+        {/* Section 3: Temporal Production Distribution (S1 2026) */}
         {(tabMode === 'continuous' || activeSection === 'temporal') && (
-          <div className="animate-fade-in" style={{ animationDelay: '400ms' }}>
+          <div className="animate-fade-in" style={{ animationDelay: '300ms' }}>
             <TemporalSection />
           </div>
         )}

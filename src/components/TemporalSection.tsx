@@ -57,7 +57,7 @@ export default function TemporalSection() {
               <BarChart3 size={16} />
             </span>
             <h2 className="text-base font-display font-bold text-[#0F172A] uppercase tracking-tight">
-              4. Visão Temporal &amp; Distribuição Mensal de Produção (1º Semestre 2026)
+              3. Visão Temporal &amp; Distribuição Mensal de Produção (1º Semestre 2026)
             </h2>
           </div>
           <p className="text-xs text-slate-500 max-w-3xl font-sans">
